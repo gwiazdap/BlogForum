@@ -1,0 +1,22 @@
+<div class="text-center mb-2">
+  <h2>Comments</h2>
+</div>
+<ul class="list-group mt-1" *ngFor="let comment of comments">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    {{comment.content}}
+    <span class="badge badge-primary badge-pill" *ngIf="comment.userId != authService.decodedToken.nameid">{{comment.username}}</span>
+    <span class="delete" *ngIf="comment.userId == authService.decodedToken.nameid">
+      <i class="fa fa-trash fa-2x" title="Delete comment" (click)="deleteComment(comment.id)"></i></span>
+    
+  </li>
+</ul>
+
+<div class="d-flex justify-content-center mt-3" *ngIf="comments.length!=0">
+    <pagination [boundaryLinks]="true" [totalItems]="pagination.totalItems"
+      [(ngModel)]="pagination.currentPage" [itemsPerPage]="pagination.pageSize"
+      (pageChanged)="pageChanged($event)"
+      
+    previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;"
+      lastText="&raquo;">
+  
+    </pagination>

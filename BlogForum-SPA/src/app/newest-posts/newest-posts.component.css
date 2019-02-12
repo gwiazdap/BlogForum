@@ -1,0 +1,24 @@
+
+.read-more-date {
+    position: relative;
+}
+
+.read-more-date a {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-size: 1.06667rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+
+.read-more-date .date {
+    position: absolute;
+    right: 0;
+    color: #90949a;
+}
+
+.card {
+    float: left;
+}
+

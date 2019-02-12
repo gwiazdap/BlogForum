@@ -1,0 +1,15 @@
+.list-group {
+    pointer-events: none;
+}
+.badge {
+    float: right;
+}
+
+.fa-times:hover {
+    cursor: pointer;
+}
+
+.delete, .delete:hover {
+    pointer-events: auto;
+    cursor: pointer;
+}

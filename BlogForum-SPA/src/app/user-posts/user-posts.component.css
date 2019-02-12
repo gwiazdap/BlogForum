@@ -1,0 +1,20 @@
+    .container-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .fa-trash:hover {
+      cursor: pointer;
+    }
+
+    .fa-edit:hover {
+      cursor: pointer;
+    }
+
+    .fa-edit {
+      margin-top: 2px;
+    }
+
+    .badge {
+      float: right;
+    }

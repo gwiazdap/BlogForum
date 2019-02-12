@@ -1,0 +1,12 @@
+   .title {
+     float: left;
+   }
+
+   .forum-sub-title {
+     float: left;
+   }
+
+   .badge {
+     float: right;
+     font-size: 15px;
+   }

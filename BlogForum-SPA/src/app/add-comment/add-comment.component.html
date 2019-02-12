@@ -1,0 +1,12 @@
+<div class="container mt-3">
+    <div class="alert alert-secondary" *ngIf="submitForm.dirty">
+      <strong>You have made changes. Any unsaved changes will be lost</strong>
+    </div>
+    <form #submitForm="ngForm" (ngSubmit)="addComment()">
+      <div class="form-group">
+        <h4>Content</h4>
+        <textarea name="content" rows="10" class="form-control" [(ngModel)]="comment.content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!submitForm.dirty">Add comment</button>
+    </form>
+  </div>

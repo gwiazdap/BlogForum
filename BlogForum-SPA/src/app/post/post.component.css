@@ -1,0 +1,7 @@
+.blockquote-footer {
+    float: right;
+}
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+  }

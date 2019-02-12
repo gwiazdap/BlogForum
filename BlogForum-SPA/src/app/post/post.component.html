@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h1 class="display-4-center">{{post.title | uppercase}}</h1>
+  <hr class="my-4">
+  <p>{{post.content}}</p>
+  <p class="lead">
+    <footer class="blockquote-footer">Added by {{post?.username}} <br> {{post?.dateAdded | timeAgo}}</footer>
+</div>
+<app-comments></app-comments>
+<div class="container-wrapper mt-2">
+    <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/posts/', post.id, 'addcomment']" >Add comment</button>
+</div>
