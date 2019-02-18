@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { Post } from '../_models/post';
 import { PaginatedResult } from '../_models/pagination';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  baseUrl = 'http://localhost:5000/api/posts/';
+  baseUrl = environment.apiUrl + 'posts/';
 
 constructor(private httpClient: HttpClient) { }
 

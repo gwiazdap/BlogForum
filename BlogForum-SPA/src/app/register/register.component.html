@@ -13,7 +13,7 @@
       <input type="password"
       [ngClass]="{'is-invalid': registerForm.get('password').errors && registerForm.get('password').touched}"
       class="form-control" formControlName="password" placeholder="Password">
-      <div class="invalid-feedback">Password must be between 4 and 8 characters.</div>
+      <div class="invalid-feedback">Password must be between 6 and 20 characters.</div>
     </div>
 
     <div class="form-group">
@@ -24,7 +24,7 @@
       </div>
   
     <div class="form-group text-center">
-      <button class="btn btn-secondary" type="submit" [disabled]="registerForm.invalid || !registerForm.dirty">Register</button>
+      <button class="btn btn-secondary mr-2" type="submit" [disabled]="registerForm.invalid || !registerForm.dirty">Register</button>
       <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
     </div>
     

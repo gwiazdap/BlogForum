@@ -22,8 +22,6 @@ export class AddCommentComponent implements OnInit {
   }
 
   addComment() {
-    console.log(this.comment);
-    // console.log(this.route.snapshot.params['id']);
     this.commentService.addComment(+this.route.snapshot.params['id'], +this.authService.decodedToken.nameid, this.comment)
       .subscribe(() => {
         this.alertifyService.success('Comment was added');

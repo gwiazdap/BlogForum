@@ -39,6 +39,7 @@ import { PostResolver } from './_resolvers/post.resolver';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CommentsResolver } from './_resolvers/comments.resolver';
+import { AboutComponent } from './about/about.component';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -61,7 +62,8 @@ export function tokenGetter() {
       TimeAgoPipe,
       SearchedUsersComponent,
       AddCommentComponent,
-      CommentsComponent
+      CommentsComponent,
+      AboutComponent
    ],
    imports: [
       BrowserModule,

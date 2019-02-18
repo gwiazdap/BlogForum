@@ -3,8 +3,8 @@
     <h1>Share your thoughts</h1>
     <p class="lead">Great place to share your thoughts with other people</p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
-      <button class="btn btn-secondary btn-lg">Learn more</button>
+      <button class="btn btn-primary btn-lg mr-2" (click)="enableRegister()">Register</button>
+      <button class="btn btn-secondary btn-lg" [routerLink]="['/about']">Learn more</button>
     </div>
   </div>
 

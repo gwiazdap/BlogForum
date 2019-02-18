@@ -5,13 +5,13 @@ import { User } from '../_models/user';
 import { Post } from '../_models/post';
 import { PaginatedResult } from '../_models/pagination';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  baseUrl = 'http://localhost:5000/api/users/';
-  searchUrl = 'http://localhost:5000/api/users';
+  baseUrl = environment.apiUrl + 'users/';
 
 constructor(private httpClient: HttpClient) {
  }
@@ -73,8 +73,9 @@ searchUsers(query: string, page?, itemsPerPage?): Observable<PaginatedResult<Use
   if (page != null && itemsPerPage != null) {
     params = params.append('pageNumber', page);
     params = params.append('pageSize', itemsPerPage);
+    params = params.append('query', query);
   }
-  return this.httpClient.get<User[]>(this.searchUrl + '?query=' + query, {observe: 'response', params})
+  return this.httpClient.get<User[]>(this.baseUrl, {observe: 'response', params})
   .pipe(
     map(response => {
       paginatedResult.result = response.body;

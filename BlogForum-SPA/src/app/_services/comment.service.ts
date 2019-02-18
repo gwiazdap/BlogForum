@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { Comment } from '../_models/comment';
 import { PaginatedResult } from '../_models/pagination';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
-  baseUrl = 'http://localhost:5000/api/comments/post/';
-  deleteUrl = 'http://localhost:5000/api/comments/';
+  baseUrl = environment.apiUrl + 'comments/post/';
+  deleteUrl = environment.apiUrl + 'coments/';
 
 constructor(private httpClient: HttpClient) { }
 

@@ -9,7 +9,7 @@ namespace BlogForum.API.DTOS
         public string Username { get; set; }
 
         [Required]
-        [StringLength(8, MinimumLength = 4, ErrorMessage = "Password must be between 4 and 8 characters.")]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "Password must be between 6 and 20 characters.")]
         public string Password { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime LastActive { get; set; }

@@ -37,16 +37,6 @@ namespace BlogForum.API.Controllers
             return Ok(usersToReturn);
         }
 
-        // [HttpGet("/search")]
-        // public async Task<IActionResult> SearchUsers([FromQuery]UserParams userParams)
-        // {
-        //     var users = await _blogRepository.GetUsers(userParams);
-
-        //     var usersToReturn = _autoMapper.Map<IEnumerable<UserForListDto>>(users);
-
-        //     return Ok(usersToReturn);
-        // }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
